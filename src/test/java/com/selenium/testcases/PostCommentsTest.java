@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.selenium.testcases;
 
 import java.util.concurrent.TimeUnit;
@@ -20,12 +18,11 @@ import utils.SeleniumUtil;
  */
 public class PostCommentsTest {
 	
-	WebDriver driver;
+
 	
 	@Test
 	public void postingComments()throws Exception{
-		
-		driver = BrowserFactory.launchBrowser("chrome","http://demosite.center/wordpress/wp-login.php");
+         WebDriver driver = BrowserFactory.launchBrowser("chrome","http://demosite.center/wordpress/wp-login.php");
 		//SeleniumUtil.takeScreenShot(driver, "wordPressHomePage");
 		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 		WordPressLogin loginPage =PageFactory.initElements(driver,WordPressLogin.class);

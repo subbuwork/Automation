@@ -17,13 +17,11 @@ import utils.SeleniumUtil;
  *
  */
 public class UpdatePostTest {
-	public static final String screenshots_location="./screenshots/wordperss/updatepost";
-	WebDriver driver;
-	
+	private static final String screenshots_location="./screenshots/wordperss/updatepost";
 	@Test
 	public void updatePost() throws Exception{
 
-	driver = BrowserFactory.launchBrowser("chrome","http://demosite.center/wordpress/wp-login.php");
+		WebDriver driver = BrowserFactory.launchBrowser("chrome","http://demosite.center/wordpress/wp-login.php");
 	//SeleniumUtil.takeScreenShot(driver, "wordPressHomePage");
 	driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 	WordPressLogin loginPage =PageFactory.initElements(driver,WordPressLogin.class);

@@ -12,10 +12,10 @@ import utils.ActionsUtils;
 import utils.BrowserFactory;
 
 public class DateTimePicker {
-	private WebDriver webdriver;
+
   @Test
   public void dateTime() throws Exception {
-	  webdriver = BrowserFactory.launchBrowser("firefox","http://www.redbus.in");
+	  WebDriver webdriver = BrowserFactory.launchBrowser("firefox","http://www.redbus.in");
 	  Thread.sleep(1000);
 	  webdriver.findElement(By.xpath("//input[@id='src']")).sendKeys("Ongole");
 	  webdriver.findElement(By.xpath("//input[@id='dest']")).sendKeys("Chennai");
