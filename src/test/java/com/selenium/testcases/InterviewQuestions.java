@@ -118,12 +118,5 @@ public class InterviewQuestions {
         System.out.println("how to maximize window");
         driver.manage().window().maximize();
         driver.get("");//Get url
-
-
-
-
-
-
-
     }
 }
